@@ -35,7 +35,7 @@ Beyond the core architecture, a significant portion of your efforts will be dedi
 This blog will provide a comprehensive overview of the entire process, from data loading to model training and evaluation. 
 This repo will be focused on the big picture of transforem in measure of class, and build one step-by-step.
 During description, some comments would be made along the codes, which is important for understanding.
-A code realization in parallel can be found in xxxxx. 
+A code realization in parallel can be found in [transformer_code.ipynb](https://github.com/shuyueW1991/transformer_code_collection_my_blog/blob/main/transformer_code.ipynb). 
 Please go over there, thanks.
 
 
