@@ -16,6 +16,14 @@ During description, some comments would be made along the codes, which is import
 A code realization in parallel can be found in xxxxx. Please move your ass there, thanks.
 
 
-
+It is very hard to really code things like a transformer from total blank.
+This is because the mainstream code is dependent upon existing wheels.
+The wheels are differnt in utilities and conditions, but they have to be familar with before you use them to serve you. 
+In this way, a transformer is quite similar to another under fingertips of many coders, which is a natural phenomenon.
+The only major difference lies in how *fine* a coder want to have his/her control in the transformer running process.
+Therefore, i believe that the versions of transformer code can be enumerated within countable numbers, because the class numbers are limited, the blocks are limited, and the  shortened code is always easy to trace within some certain block.
+I think, if people (i, in particular) are familiar with the detailed version of each block(in East Asian culture, to 'Bei4', wink), then you can master the area.
+The experience can also be extended to other areas, for those who wants to be innovational in creative ideas and professional in product delivery.
+This is the modern fashion of knowledge manufacturing in early half of 21th century.
 
 
