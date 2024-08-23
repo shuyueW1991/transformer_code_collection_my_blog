@@ -1,29 +1,46 @@
 # Build a transformer from scratch: why and how
 
-Due its 'pattern' different from its previous counterparts in the world of deep learning, the architecture of transformer gains its popularity in many tasks.
-Therefore, many deep learning amateurs become fanatic to this architecture, and to its build-up from scratch thereof.
+The transformer architecture, renowned for its innovative approach to sequence modeling, has quickly gained popularity in various deep learning tasks. 
+Its departure from traditional recurrent neural network (RNN) structures has opened up new possibilities and improved performance.
+The allure of building a transformer from scratch has captivated many aspiring deep learning practitioners. 
 
-In many similar blogs, the `scratch` refers to pytorch. That is to say, we don't build a transformer from 0-1 binary, and we don't build a transformer from python toolkits --- we build a transformer from torch, and more specifically, the `nn.Module` packages and other torch utilities.
-There are some phases in building a transformer that has convenient combo of layers. For example, the Encoder part has its official issue in transformers package. There are some bloggers using those directly in their architecture.
-Alongside with those meticulous works, a much more popluar way of deploying transformer is to read the model card of an existing huggingface repository, calling the API's via `from_pretrained`, `tokenizer`, etc, thus customizing pipelines.
-This blog that you are reading belongs to the first class of blogs.
 
-The most typical method of realizing a transformer is to write class for each part of architecture.
-Good news is that many codes are shared in many code repositories that you find in GitHub, for example, the indent and empty lines in attention class is almost the same! which makes things very strange that the most difficult part of the code becomes one of the easiest to understand.
-As matter of fact, more time and effort and dedicated to the I/O of data.
+While some might envision starting from absolute zero, the reality often involves leveraging powerful frameworks like PyTorch. 
+In many similar blogs, the `scratch` refers to PyTorch. 
+That is to say, we don't build a transformer from 0-1 binary, and we don't build a transformer from python toolkits --- we build a transformer from torch.
+Specifically, the `nn.Module` class and other PyTorch utilities provide a solid foundation for constructing transformer components.
+
+
+There are some phases in building a transformer that has convenient combo of layers, thanks to the transformer's modular design allows for flexible customization. 
+While some enthusiasts delve into the intricacies of constructing individual layers like the encoder, others prefer to take advantage of pre-trained models available through platforms like Hugging Face.
+For example, the Encoder part has its official issue in transformers package. 
+There are some bloggers using those directly in their architecture.
+Alongside with those meticulous works, a much more popular way of deploying transformer is to read the model card of an existing huggingface repository, calling the API's via `from_pretrained`, `tokenizer`, etc, thus customizing pipelines.
+Au contraire, it is very hard to really code things like a transformer from total blank.
+This is because the mainstream code is dependent upon existing wheels.
+The wheels are different in utilities and conditions, but they have to be familiar with before you use them to serve you. 
+The level of granularity a developer desires in controlling the transformer's execution is a key consideration. 
+I believe that the potential variations of transformer code are finite, as the number of classes, blocks, and code optimizations is limited. This makes it generally feasible to trace and understand the behavior of a transformer implementation within specific code segments.
+
+
+This blog that you are reading belongs to the first class of blogs: it is focused on the fundamental building blocks of a transformer architecture, guiding you through the process of creating each component as a self-contained class. 
+The most typical method of realizing a transformer is to write class for each part of architecture (or `blocks` in form of classes).
+You'll discover that many code repositories share common patterns and structures, making the implementation of key components surprisingly straightforward. 
+Good news is that many codes are shared in many code repositories that you find in GitHub, for example, the indent and empty lines in attention class is almost the same! 
+--- which makes things very strange that the most difficult part of the code becomes one of the easiest to understand.
+
+
+
+Beyond the core architecture, a significant portion of your efforts will be dedicated to data preparation and I/O tasks. 
+This blog will provide a comprehensive overview of the entire process, from data loading to model training and evaluation. 
 This repo will be focused on the big picture of transforem in measure of class, and build one step-by-step.
 During description, some comments would be made along the codes, which is important for understanding.
-A code realization in parallel can be found in xxxxx. Please move your ass there, thanks.
+A code realization in parallel can be found in xxxxx. 
+Please go over there, thanks.
 
 
-It is very hard to really code things like a transformer from total blank.
-This is because the mainstream code is dependent upon existing wheels.
-The wheels are differnt in utilities and conditions, but they have to be familar with before you use them to serve you. 
-In this way, a transformer is quite similar to another under fingertips of many coders, which is a natural phenomenon.
-The only major difference lies in how *fine* a coder want to have his/her control in the transformer running process.
-Therefore, i believe that the versions of transformer code can be enumerated within countable numbers, because the class numbers are limited, the blocks are limited, and the  shortened code is always easy to trace within some certain block.
-I think, if people (i, in particular) are familiar with the detailed version of each block(in East Asian culture, to 'Bei4', wink), then you can master the area.
-The experience can also be extended to other areas, for those who wants to be innovational in creative ideas and professional in product delivery.
-This is the modern fashion of knowledge manufacturing in early half of 21th century.
+A deep understanding of the underlying components, or 'building blocks,' is crucial for mastering any complex system. In the realm of technology, this principle applies particularly to the transformer architecture. By thoroughly understanding the intricacies of each component, you can gain a competitive edge and innovate effectively.
+This approach, prevalent in the early 21st century, has become a cornerstone of modern knowledge creation. By combining a deep understanding of fundamentals with a focus on innovation and practical application, individuals can excel in their fields and contribute to groundbreaking advancements.
+
 
 
